@@ -34,8 +34,8 @@ export function ServicesSection() {
   const benefits = [
     {
       icon: Shield,
-      title: "Quality Guarantee",
-      description: "We stand behind our work with comprehensive warranties"
+      title: "Quality Workmanship",
+      description: "We follow industry best practices and take pride in our workmanship."
     },
     {
       icon: Clock,

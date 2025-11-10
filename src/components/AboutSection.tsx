@@ -38,7 +38,7 @@ export function AboutSection() {
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Founded in 2009, Golden Line Contracting has been Calgary's trusted painting 
               partner for over 15 years. We take pride in delivering exceptional craftsmanship 
-              and customer service that has earned us a reputation as one of the city's premier 
+              and customer service that has earned us a reputation as one of the city's leading
               painting contractors.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -70,8 +70,8 @@ export function AboutSection() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="mb-4 text-primary">Our Commitment</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Licensed and fully insured for your peace of mind</li>
-                <li>• Using only premium, eco-friendly paint products</li>
+                {/* <li>• Licensed & insured — contact us to confirm coverage and details</li> */}
+                <li>• We strive to use premium, eco-friendly paint products when available</li>
                 <li>• Thorough surface preparation for lasting results</li>
                 <li>• Clean, professional work environment</li>
                 <li>• Competitive pricing with transparent quotes</li>

@@ -6,7 +6,7 @@ import { Label } from "./ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -91,12 +91,12 @@ export function ContactSection() {
                         value={formData.phone}
                         onChange={(e) => handleChange("phone", e.target.value)}
                         required
-                        placeholder="(403) 555-0123"
+                        placeholder="(403) 123-4567"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="service">Service Type *</Label>
-                      <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
+                      <Select value={formData.service} onValueChange={(value: string) => handleChange("service", value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
@@ -113,7 +113,7 @@ export function ContactSection() {
 
                   <div className="space-y-2">
                     <Label htmlFor="projectType">Project Type</Label>
-                    <Select value={formData.projectType} onValueChange={(value) => handleChange("projectType", value)}>
+                    <Select value={formData.projectType} onValueChange={(value: string) => handleChange("projectType", value)}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select project type" />
                       </SelectTrigger>
@@ -155,14 +155,30 @@ export function ContactSection() {
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">(403) 555-0123</p>
+                    <p className="font-medium">
+                      <a
+                        href="tel:+14039095375"
+                        className="hover:underline"
+                        aria-label="Call Golden Line Contracting at (403) 909-5375"
+                      >
+                        (403) 909-5375
+                      </a>
+                    </p>
                     <p className="text-sm text-muted-foreground">Call or text anytime</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">info@goldenlinepainting.ca</p>
+                    <p className="font-medium">
+                      <a
+                        href="mailto:goldenlinecontracting@gmail.com"
+                        className="hover:underline"
+                        aria-label="Email Golden Line Contracting"
+                      >
+                        goldenlinecontracting@gmail.com
+                      </a>
+                    </p>
                     <p className="text-sm text-muted-foreground">Email us anytime</p>
                   </div>
                 </div>

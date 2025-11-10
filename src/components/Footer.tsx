@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,9 +11,29 @@ export function Footer() {
               Calgary's trusted painting professionals since 2009. 
               We transform spaces with quality craftsmanship and exceptional service.
             </p>
-            <div className="text-sm opacity-80">
-              Licensed • Insured • Bonded
+            <div className="flex items-center space-x-4 mt-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61579348362164"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Golden Line on Facebook"
+                className="hover:text-primary"
+              >
+                <Facebook className="h-[26px] w-[26px] text-secondary-foreground opacity-80" />
+              </a>
+              <a
+                href="https://www.instagram.com/golden_line_contracting_ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Golden Line on Instagram"
+                className="hover:text-primary"
+              >
+                <Instagram className="h-[26px] w-[26px] text-secondary-foreground opacity-80" />
+              </a>
             </div>
+            {/* <div className="text-sm opacity-80">
+              Licensed • Insured • Bonded
+            </div> */}
           </div>
           
           <div>
@@ -33,11 +53,23 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(403) 555-0123</span>
+                <a
+                  href="tel:+14039095375"
+                  className="hover:underline"
+                  aria-label="Call Golden Line Contracting at (403) 909-5375"
+                >
+                  (403) 909-5375
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@goldenlinepainting.ca</span>
+                <a
+                  href="mailto:goldenlinecontracting@gmail.com"
+                  className="hover:underline"
+                  aria-label="Email Golden Line Contracting"
+                >
+                  goldenlinecontracting@gmail.com
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
@@ -49,6 +81,18 @@ export function Footer() {
         
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-80">
           <p>&copy; 2025 Golden Line Contracting LTD. All rights reserved.</p>
+          <p className="mt-2">
+            Designed by{" "}
+            <a
+              href="https://nutab.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline"
+              style={{ color: "var(--primary)" }}
+            >
+              NuTab Digital
+            </a>
+          </p>
         </div>
       </div>
     </footer>
