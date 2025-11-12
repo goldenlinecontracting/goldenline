@@ -56,8 +56,7 @@
     },
     build: {
       target: 'esnext',
-      // output to `docs` so GitHub Pages can serve from the main branch /docs folder
-      outDir: 'docs',
+      outDir: 'build',
     },
     server: {
       port: 3000,

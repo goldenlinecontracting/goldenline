@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
-const logo = "src/assets/logo.png";
+const logo = new URL("../assets/logo.png", import.meta.url).href;
 
 export function Footer() {
   return (

@@ -1,6 +1,8 @@
 import { Card, CardContent } from "./ui/card";
 import { Users, Award, Clock, MapPin } from "lucide-react";
-const manPainting = "src/assets/man-painting.png";
+const manPainting = new URL("../assets/man-painting.png", import.meta.url).href;
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+
 
 export function AboutSection() {
   const stats = [
@@ -58,7 +60,7 @@ export function AboutSection() {
           </div>
           
           <div className="space-y-4">
-            <img
+            <ImageWithFallback
               src={manPainting}
               alt="Professional painter at work"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
