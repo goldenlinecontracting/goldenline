@@ -1,5 +1,6 @@
 import { Card, CardContent } from "./ui/card";
 import { Users, Award, Clock, MapPin } from "lucide-react";
+const manPainting = "src/assets/man-painting.png";
 
 export function AboutSection() {
   const stats = [
@@ -57,8 +58,8 @@ export function AboutSection() {
           </div>
           
           <div className="space-y-4">
-            <img 
-              src="src/assets/man-painting.png"
+            <img
+              src={manPainting}
               alt="Professional painter at work"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />

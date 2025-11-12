@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+const logo = "src/assets/logo.png";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="src/assets/logo.png"
+                src={logo}
                 alt="Golden Line logo"
                 className="h-10 w-auto rounded-sm"
               />

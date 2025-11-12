@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Phone, Mail, Menu, X } from "lucide-react";
 import { scrollToId } from "../lib/scrollTo";
+const logo = "src/assets/logo.png";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -44,7 +45,7 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <img 
-              src="src/assets/logo.png"
+              src={logo}
               alt="goldenlinecontracting"
               className="h-24 w-auto"
             />

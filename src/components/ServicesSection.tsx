@@ -1,7 +1,7 @@
-const beforeAfter = "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTY0MTQyOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Home, Building2, Brush, Palette, Shield, Clock } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+const beforeAfter = "src/assets/before-after.png";
 
 export function ServicesSection() {
   const services = [
@@ -92,7 +92,7 @@ export function ServicesSection() {
           
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="src/assets/before-after.png"
+              src={beforeAfter}
               alt="Interior painting project"
               className="rounded-lg h-48 object-cover"
             />
