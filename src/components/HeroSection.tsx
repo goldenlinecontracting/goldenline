@@ -65,7 +65,11 @@ export function HeroSection() {
               <Button size="lg" onClick={scrollToContact}>
                 Get Free Estimate
               </Button>
-              <Button variant="outline" size="lg" onClick={callPhone}>
+              <Button
+                size="lg"
+                onClick={callPhone}
+                className="bg-secondary text-secondary-foreground hover:opacity-95 border-none"
+              >
                 Call (403) 909-5375
               </Button>
             </div>

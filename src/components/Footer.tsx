@@ -8,15 +8,14 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/logo.webp"
+                src="src/assets/logo.png"
                 alt="Golden Line logo"
                 className="h-10 w-auto rounded-sm"
               />
               <h3 className="text-lg">Golden Line Contracting LTD</h3>
             </div>
             <p className="text-sm opacity-80 mb-4">
-              Calgary's trusted painting professionals since 2008. 
-              We transform spaces with quality craftsmanship and exceptional service.
+              Founded and led by Moe, a professional painter since 2008. Golden Line delivers meticulous, high‑quality painting across Calgary with durable finishes.
             </p>
             <div className="flex items-center space-x-4 mt-4">
               <a

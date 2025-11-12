@@ -44,7 +44,7 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <img 
-              src="/logo.webp"
+              src="src/assets/logo.png"
               alt="goldenlinecontracting"
               className="h-24 w-auto"
             />
@@ -63,6 +63,12 @@ export function Header() {
               className="text-foreground hover:text-primary transition-colors"
             >
               About
+            </button>
+            <button
+              onClick={() => scrollToSection('gallery')}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Gallery
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -124,6 +130,12 @@ export function Header() {
                 className="text-lg text-foreground hover:text-primary font-normal"
               >
                 About
+              </button>
+              <button
+                onClick={() => scrollToSection("gallery")}
+                className="text-lg text-foreground hover:text-primary font-normal"
+              >
+                Gallery
               </button>
               <button
                 onClick={() => scrollToSection("contact")}

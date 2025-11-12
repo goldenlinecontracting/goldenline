@@ -91,8 +91,8 @@ export function ServicesSection() {
           </div>
           
           <div className="grid grid-cols-2 gap-4">
-            <ImageWithFallback 
-              src={beforeAfter}
+            <img
+              src="src/assets/before-after.png"
               alt="Interior painting project"
               className="rounded-lg h-48 object-cover"
             />

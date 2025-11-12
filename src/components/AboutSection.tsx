@@ -1,6 +1,5 @@
- import { Card, CardContent } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { Users, Award, Clock, MapPin } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function AboutSection() {
   const stats = [
@@ -35,15 +34,13 @@ export function AboutSection() {
               About Golden Line Contracting
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Founded in 2008, Golden Line Contracting has been Calgary's trusted painting 
-              partner for over 15 years. We take pride in delivering exceptional craftsmanship 
-              and customer service that has earned us a reputation as one of the city's leading
-              painting contractors.
+              <span className="lead-name">Moe</span>, the founder and lead painter, began his professional painting career in 2008. Over more than a decade of field experience, 
+              he has refined a methodical approach to surface preparation, paint selection, and finishing that prioritizes longevity and precision.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our team of experienced professionals is committed to transforming your vision 
-              into reality. Whether it's a single room refresh or a complete property makeover, 
-              we approach every project with the same attention to detail and dedication to excellence.
+              <span className="lead-name">He</span> established Golden Line with a clear objective: provide clients with dependable, high-quality painting services delivered with integrity. 
+              Under Moe’s leadership, the company follows industry best practices, maintains strict quality controls, and communicates clearly at every stage. 
+              From single-room interiors to comprehensive exterior projects, clients can expect professional execution, timely delivery, and a durable, refined finish.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
@@ -60,15 +57,15 @@ export function AboutSection() {
           </div>
           
           <div className="space-y-4">
-            <ImageWithFallback 
-              src={"assets/man-painting.png"}
+            <img 
+              src="src/assets/man-painting.png"
               alt="Professional painter at work"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="mb-4 text-primary">Our Commitment</h3>
-              <ul className="space-y-2 text-muted-foreground">
+            <div className="bg-secondary text-secondary-foreground p-6 rounded-lg shadow-md">
+              <h3 className="mb-4">Our Commitment</h3>
+              <ul className="space-y-2">
                 {/* <li>• Licensed & insured — contact us to confirm coverage and details</li> */}
                 <li>• We strive to use premium, eco-friendly paint products when available</li>
                 <li>• Thorough surface preparation for lasting results</li>

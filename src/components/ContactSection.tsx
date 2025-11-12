@@ -67,6 +67,7 @@ export function ContactSection() {
                         onChange={(e) => handleChange("name", e.target.value)}
                         required
                         placeholder="John Smith"
+                        className="beige-field"
                       />
                     </div>
                     <div className="space-y-2">
@@ -78,6 +79,7 @@ export function ContactSection() {
                         onChange={(e) => handleChange("email", e.target.value)}
                         required
                         placeholder="john@example.com"
+                        className="beige-field"
                       />
                     </div>
                   </div>
@@ -92,12 +94,13 @@ export function ContactSection() {
                         onChange={(e) => handleChange("phone", e.target.value)}
                         required
                         placeholder="(403) 123-4567"
+                        className="beige-field"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="service">Service Type *</Label>
                       <Select value={formData.service} onValueChange={(value: string) => handleChange("service", value)}>
-                        <SelectTrigger>
+                        <SelectTrigger className="beige-field">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -114,7 +117,7 @@ export function ContactSection() {
                   <div className="space-y-2">
                     <Label htmlFor="projectType">Project Type</Label>
                     <Select value={formData.projectType} onValueChange={(value: string) => handleChange("projectType", value)}>
-                      <SelectTrigger>
+                      <SelectTrigger className="beige-field">
                         <SelectValue placeholder="Select project type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -135,6 +138,7 @@ export function ContactSection() {
                       onChange={(e) => handleChange("message", e.target.value)}
                       placeholder="Tell us about your project, preferred timeline, and any specific requirements..."
                       rows={4}
+                      className="beige-field"
                     />
                   </div>
 
@@ -199,10 +203,10 @@ export function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-accent">
+            <Card className="bg-secondary text-secondary-foreground">
               <CardContent className="p-6">
-                <h3 className="mb-3 text-primary">Why Get an Estimate?</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <h3 className="mb-3 text-secondary-foreground">Why Get an Estimate?</h3>
+                <ul className="space-y-2 text-sm text-secondary-foreground/90">
                   <li>• Detailed project assessment</li>
                   <li>• Material recommendations</li>
                   <li>• Timeline planning</li>
