@@ -172,11 +172,11 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium">
                       <a
-                        href="mailto:goldenlinecontracting@gmail.com"
+                        href="mailto:moe@goldenlinecontracting.com"
                         className="hover:underline"
                         aria-label="Email Golden Line Contracting"
                       >
-                        goldenlinecontracting@gmail.com
+                        moe@goldenlinecontracting.com
                       </a>
                     </p>
                     <p className="text-sm text-muted-foreground">Email us anytime</p>

@@ -1,5 +1,5 @@
 // @ts-ignore: Figma asset import has no type declarations in this project
-import image_47506b2a7ed370e85a455cac22c080443088bf78 from 'figma:asset/47506b2a7ed370e85a455cac22c080443088bf78.png';
+import heroImage from '../assets/hero.png';
 import { Button } from "./ui/button";
 import { CheckCircle, Star } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -73,7 +73,7 @@ export function HeroSection() {
           
           <div className="relative">
             <ImageWithFallback 
-              src={image_47506b2a7ed370e85a455cac22c080443088bf78}
+              src={heroImage}
               alt="Professional house painting exterior"
               className="rounded-lg shadow-2xl w-full h-[300px] object-contain"
             />

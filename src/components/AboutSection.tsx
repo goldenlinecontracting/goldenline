@@ -1,5 +1,4 @@
-import image_c03acc4c2c1fa51627110fb1459dfe614cb1d879 from 'figma:asset/c03acc4c2c1fa51627110fb1459dfe614cb1d879.png';
-import { Card, CardContent } from "./ui/card";
+ import { Card, CardContent } from "./ui/card";
 import { Users, Award, Clock, MapPin } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -36,7 +35,7 @@ export function AboutSection() {
               About Golden Line Contracting
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Founded in 2009, Golden Line Contracting has been Calgary's trusted painting 
+              Founded in 2008, Golden Line Contracting has been Calgary's trusted painting 
               partner for over 15 years. We take pride in delivering exceptional craftsmanship 
               and customer service that has earned us a reputation as one of the city's leading
               painting contractors.
@@ -62,7 +61,7 @@ export function AboutSection() {
           
           <div className="space-y-4">
             <ImageWithFallback 
-              src={image_c03acc4c2c1fa51627110fb1459dfe614cb1d879}
+              src={"assets/man-painting.png"}
               alt="Professional painter at work"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />

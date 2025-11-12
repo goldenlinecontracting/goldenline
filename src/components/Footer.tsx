@@ -6,9 +6,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg mb-4">Golden Line Contracting LTD</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img
+                src="/logo.webp"
+                alt="Golden Line logo"
+                className="h-10 w-auto rounded-sm"
+              />
+              <h3 className="text-lg">Golden Line Contracting LTD</h3>
+            </div>
             <p className="text-sm opacity-80 mb-4">
-              Calgary's trusted painting professionals since 2009. 
+              Calgary's trusted painting professionals since 2008. 
               We transform spaces with quality craftsmanship and exceptional service.
             </p>
             <div className="flex items-center space-x-4 mt-4">
@@ -17,18 +24,18 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Golden Line on Facebook"
-                className="hover:text-primary"
+                className="text-secondary-foreground opacity-80 hover:text-primary"
               >
-                <Facebook className="h-[26px] w-[26px] text-secondary-foreground opacity-80" />
+                <Facebook className="h-[26px] w-[26px]" />
               </a>
               <a
                 href="https://www.instagram.com/golden_line_contracting_ltd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Golden Line on Instagram"
-                className="hover:text-primary"
+                className="text-secondary-foreground opacity-80 hover:text-primary"
               >
-                <Instagram className="h-[26px] w-[26px] text-secondary-foreground opacity-80" />
+                <Instagram className="h-[26px] w-[26px]" />
               </a>
             </div>
             {/* <div className="text-sm opacity-80">
@@ -64,11 +71,11 @@ export function Footer() {
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <a
-                  href="mailto:goldenlinecontracting@gmail.com"
+                  href="mailto:moe@goldenlinecontracting.com"
                   className="hover:underline"
                   aria-label="Email Golden Line Contracting"
                 >
-                  goldenlinecontracting@gmail.com
+                  moe@goldenlinecontracting.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">

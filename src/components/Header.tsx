@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Phone, Mail, Menu, X } from "lucide-react";
-import logo from "../assets/0dd70d48835ac32ee8cb88aad5856bf8c763a037.png";
 import { scrollToId } from "../lib/scrollTo";
 
 export function Header() {
@@ -45,8 +44,8 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <img 
-              src={logo} 
-              alt="goldenlinecontracting" 
+              src="/logo.webp"
+              alt="goldenlinecontracting"
               className="h-24 w-auto"
             />
             <span className="ml-2 text-sm text-muted-foreground">Calgary, AB</span>
