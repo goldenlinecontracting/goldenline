@@ -15,25 +15,48 @@ export function ContactSection() {
     phone: "",
     service: "",
     projectType: "",
-    message: ""
+    message: "",
+    _gotcha: "", // Honeypot field for spam protection
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, this would submit to a backend
-    toast.success("Thank you! We'll contact you within 24 hours to schedule your free estimate.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      projectType: "",
-      message: ""
-    });
-  };
 
   const handleChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Prevent submission if honeypot is filled
+    if (formData._gotcha) return;
+
+    try {
+      const res = await fetch("https://formspree.io/f/mpwbpoql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        toast.success("Thank you! We'll contact you within 24 hours.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          projectType: "",
+          message: "",
+          _gotcha: "",
+        });
+      } else {
+        toast.error("Oops! Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Oops! Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -58,6 +81,9 @@ export function ContactSection() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field */}
+                  <input type="text" name="_gotcha" style={{ display: "none" }} value={formData._gotcha} onChange={(e) => handleChange("_gotcha", e.target.value)} />
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
@@ -68,6 +94,7 @@ export function ContactSection() {
                         required
                         placeholder="John Smith"
                         className="beige-field"
+                        name="name"
                       />
                     </div>
                     <div className="space-y-2">
@@ -80,6 +107,7 @@ export function ContactSection() {
                         required
                         placeholder="john@example.com"
                         className="beige-field"
+                        name="email"
                       />
                     </div>
                   </div>
@@ -95,12 +123,13 @@ export function ContactSection() {
                         required
                         placeholder="(403) 123-4567"
                         className="beige-field"
+                        name="phone"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="service">Service Type *</Label>
                       <Select value={formData.service} onValueChange={(value: string) => handleChange("service", value)}>
-                        <SelectTrigger className="beige-field">
+                        <SelectTrigger className="beige-field" name="service">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -117,7 +146,7 @@ export function ContactSection() {
                   <div className="space-y-2">
                     <Label htmlFor="projectType">Project Type</Label>
                     <Select value={formData.projectType} onValueChange={(value: string) => handleChange("projectType", value)}>
-                      <SelectTrigger className="beige-field">
+                      <SelectTrigger className="beige-field" name="projectType">
                         <SelectValue placeholder="Select project type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -139,6 +168,7 @@ export function ContactSection() {
                       placeholder="Tell us about your project, preferred timeline, and any specific requirements..."
                       rows={4}
                       className="beige-field"
+                      name="message"
                     />
                   </div>
 
@@ -150,6 +180,7 @@ export function ContactSection() {
             </Card>
           </div>
 
+          {/* Contact Info and Why Get an Estimate cards unchanged */}
           <div className="space-y-6">
             <Card>
               <CardHeader>
@@ -160,13 +191,7 @@ export function ContactSection() {
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">
-                      <a
-                        href="tel:+14039095375"
-                        className="hover:underline"
-                        aria-label="Call Golden Line Contracting at (403) 909-5375"
-                      >
-                        (403) 909-5375
-                      </a>
+                      <a href="tel:+14039095375" className="hover:underline" aria-label="Call Golden Line Contracting at (403) 909-5375">(403) 909-5375</a>
                     </p>
                     <p className="text-sm text-muted-foreground">Call or text anytime</p>
                   </div>
@@ -175,13 +200,7 @@ export function ContactSection() {
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">
-                      <a
-                        href="mailto:moe@goldenlinecontracting.com"
-                        className="hover:underline"
-                        aria-label="Email Golden Line Contracting"
-                      >
-                        moe@goldenlinecontracting.com
-                      </a>
+                      <a href="mailto:moe@goldenlinecontracting.com" className="hover:underline" aria-label="Email Golden Line Contracting">moe@goldenlinecontracting.com</a>
                     </p>
                     <p className="text-sm text-muted-foreground">Email us anytime</p>
                   </div>
