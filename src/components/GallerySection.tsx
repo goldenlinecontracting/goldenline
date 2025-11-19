@@ -23,10 +23,12 @@ export function GallerySection() {
     <section id="gallery" className="py-20 bg-muted/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Elfsight widget container (keeps original widget id supplied) */}
-        <div
-          className="elfsight-app-aacafa1f-d8b4-4b1b-8ac3-ce7f40a6b60c"
-          data-elfsight-app-lazy
-        />
+         <div className="mx-auto" style={{ width: "90%"}}>
+          <div
+            className="elfsight-app-aacafa1f-d8b4-4b1b-8ac3-ce7f40a6b60c"
+            data-elfsight-app-lazy
+          />
+        </div>
       </div>
     </section>
   );

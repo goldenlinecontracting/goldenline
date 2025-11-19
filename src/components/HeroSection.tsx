@@ -38,7 +38,7 @@ export function HeroSection() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl mb-6 text-foreground">
-              Calgary's Premier <span className="text-primary">Golden</span> Standard in <span className="text-secondary">Painting</span>
+              Calgary's <span className="text-primary">Golden</span> Standard in <span className="text-secondary">Painting</span>
             </h1>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">

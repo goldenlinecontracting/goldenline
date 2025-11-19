@@ -8,15 +8,27 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img
-                src={logo}
-                alt="Golden Line logo"
-                className="h-10 w-auto rounded-sm"
-              />
-              <h3 className="text-lg">Golden Line Contracting LTD</h3>
+              <button
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="flex items-center space-x-3"
+              >
+                <img
+                  src={logo}
+                  alt="Golden Line logo"
+                  className="h-10 w-auto rounded-sm"
+                />
+                <h3 className="text-lg cursor-pointer">
+                  Golden Line Contracting LTD
+                </h3>
+              </button>
             </div>
+
             <p className="text-sm opacity-80 mb-4">
-              Founded and led by Moe, a professional painter since 2008. Golden Line delivers meticulous, high‑quality painting across Calgary with durable finishes.
+              Founded and led by Moe, a professional painter since 2008. Golden
+              Line delivers meticulous, high‑quality painting across Calgary
+              with durable finishes.
             </p>
             <div className="flex items-center space-x-4 mt-4">
               <a
@@ -42,7 +54,7 @@ export function Footer() {
               Licensed • Insured • Bonded
             </div> */}
           </div>
-          
+
           <div>
             <h4 className="mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm opacity-80">
@@ -54,7 +66,7 @@ export function Footer() {
               <li>Deck & Fence Staining</li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="mb-4">Contact Us</h4>
             <div className="space-y-3 text-sm">
@@ -85,7 +97,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-80">
           <p>&copy; 2025 Golden Line Contracting LTD. All rights reserved.</p>
           <p className="mt-2">

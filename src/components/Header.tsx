@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
- import { Button } from "./ui/button";
- import { Phone, Mail, Menu, X } from "lucide-react";
- import { scrollToId } from "../lib/scrollTo";
+import { Button } from "./ui/button";
+import { Phone, Mail, Menu, X } from "lucide-react";
+import { scrollToId } from "../lib/scrollTo";
 const logo = new URL("../assets/logo.png", import.meta.url).href;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.matchMedia("(max-width: 767px)").matches : false
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width: 767px)").matches
+      : false
   );
 
   const scrollToSection = (id: string) => {
@@ -29,7 +31,8 @@ export function Header() {
     else mq.addListener(onChange as any);
 
     return () => {
-      if (mq.removeEventListener) mq.removeEventListener("change", onChange as any);
+      if (mq.removeEventListener)
+        mq.removeEventListener("change", onChange as any);
       else mq.removeListener(onChange as any);
     };
   }, []);
@@ -44,35 +47,44 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <img 
-              src={logo}
-              alt="goldenlinecontracting"
-              className="h-24 w-auto"
-            />
-            <span className="ml-2 text-sm text-muted-foreground">Calgary, AB</span>
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="flex items-center"
+            >
+              <img
+                src={logo}
+                alt="goldenlinecontracting"
+                className="h-12 w-auto cursor-pointer"
+              />
+            </button>
+            {/* <span className="ml-2 text-sm text-muted-foreground">
+              Calgary, AB
+            </span> */}
           </div>
-          
+
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('services')}
+            <button
+              onClick={() => scrollToSection("services")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Services
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
+            <button
+              onClick={() => scrollToSection("about")}
               className="text-foreground hover:text-primary transition-colors"
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection('gallery')}
+              onClick={() => scrollToSection("gallery")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Gallery
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <button
+              onClick={() => scrollToSection("contact")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Contact
@@ -103,7 +115,11 @@ export function Header() {
                 aria-expanded={mobileOpen}
                 aria-controls="mobile-menu"
               >
-                {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {mobileOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             )}
           </div>
@@ -155,7 +171,10 @@ export function Header() {
               </a>
 
               <div className="pt-2">
-                <Button type="button" onClick={() => scrollToSection("contact")}>
+                <Button
+                  type="button"
+                  onClick={() => scrollToSection("contact")}
+                >
                   Get Quote
                 </Button>
               </div>

@@ -70,7 +70,7 @@ export function AboutSection() {
               <h3 className="mb-4">Our Commitment</h3>
               <ul className="space-y-2">
                 {/* <li>• Licensed & insured — contact us to confirm coverage and details</li> */}
-                <li>• We strive to use premium, eco-friendly paint products when available</li>
+                {/* <li>• We strive to use premium, eco-friendly paint products when available</li> */}
                 <li>• Thorough surface preparation for lasting results</li>
                 <li>• Clean, professional work environment</li>
                 <li>• Competitive pricing with transparent quotes</li>
