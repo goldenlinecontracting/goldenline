@@ -56,7 +56,8 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'dist',      // REQUIRED FOR OPTION 1
+      assetsDir: 'assets', // optional but clean
     },
     server: {
       port: 3000,
