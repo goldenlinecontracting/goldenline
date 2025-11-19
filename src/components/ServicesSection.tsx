@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Home, Building2, Brush, Palette, Shield, Clock } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-const beforeAfter = new URL("../assets/before-after.png", import.meta.url).href;
+const beforeAfter = new URL("../assets/before-after.webp", import.meta.url).href;
 
 export function ServicesSection() {
   const services = [

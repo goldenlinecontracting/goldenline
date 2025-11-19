@@ -1,6 +1,6 @@
 import { Card, CardContent } from "./ui/card";
 import { Users, Award, Clock, MapPin } from "lucide-react";
-const manPainting = new URL("../assets/man-painting.png", import.meta.url).href;
+const manPainting = new URL("../assets/man-painting.webp", import.meta.url).href;
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 

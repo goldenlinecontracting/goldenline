@@ -1,5 +1,5 @@
 // @ts-ignore: Figma asset import has no type declarations in this project
-import heroImage from '../assets/hero.png';
+import heroImage from '../assets/hero.webp';
 import { Button } from "./ui/button";
 import { CheckCircle, Star } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";

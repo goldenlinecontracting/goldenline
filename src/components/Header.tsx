@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Phone, Mail, Menu, X } from "lucide-react";
 import { scrollToId } from "../lib/scrollTo";
-const logo = new URL("../assets/logo.png", import.meta.url).href;
+const logo = new URL("../assets/logo.webp", import.meta.url).href;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
