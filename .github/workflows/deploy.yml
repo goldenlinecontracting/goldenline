@@ -12,7 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # keep credentials so downstream steps can push
           persist-credentials: true
 
       - name: Use Node.js
@@ -29,8 +28,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # Use a personal access token stored in repo secrets when org/repo policies prevent the default GITHUB_TOKEN from pushing.
-          # Create a PAT with 'repo' scope and add it to repository Secrets as GH_PAGES_TOKEN, or keep using GITHUB_TOKEN if it already has write permissions.
           github_token: ${{ secrets.GH_PAGES_TOKEN || secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
           publish_branch: gh-pages
